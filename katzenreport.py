@@ -1,5 +1,5 @@
+#!/usr/bin/env python
 import sys
-
 import classify
 import sendmail
 
@@ -9,11 +9,10 @@ import sendmail
 def do(image):
 
   result = classify.classify(image)
-  print result
   if result[0] in ('enter',):
     sendmail.go(image, result)
 		
 
 if __name__ == "__main__":
-	img = "TEST.jpg"
+	img =  str(sys.argv[1])
 	do(img)

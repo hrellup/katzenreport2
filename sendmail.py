@@ -5,13 +5,12 @@ from email.mime.multipart import MIMEMultipart
 from smtplib import SMTP
 import smtplib
 import sys
-#import syslog
+import syslog
 import emailconfig
 
 
 
 RECIPIENTS = ['fabian.puller@pfennigsberg.de', 'susi.puller@pfennigsberg.de', 'jens.puller@pfennigsberg.de']
-RECIPIENTS = ['fabian.puller@pfennigsberg.de']
 FROM = emailconfig.DATA['from']
 SUBJECT = 'Katzenreport'
 SERVER = emailconfig.DATA['server']
@@ -24,7 +23,7 @@ TEST = "TEST.JPG"
 
 def go(image, result):
 	
-	#syslog.syslog('sendmail start')
+	syslog.syslog('sendmail start')
 
 	emaillist = [elem.strip().split(',') for elem in RECIPIENTS]
 	msg = MIMEMultipart()
@@ -50,7 +49,7 @@ def go(image, result):
 	server.sendmail(msg['From'], emaillist , msg.as_string())
 
 
-	#syslog.syslog('sendmail end')
+	syslog.syslog('sendmail end')
 	
 	
 if __name__ == "__main__":

@@ -1,0 +1,44 @@
+    2  sudo raspi-config 
+    6  sudo apt-get update
+    7  sudo apt-get install motion
+    9  sudo apt-get install sshd
+   10  sudo apt-get install ssh
+   50  sudo apt-get install vim
+   80  sudo pip install python
+   81  sudo apt-get install python-dev python-setuptools
+   87  sudo apt-get install python-pillow
+   24  sudo cp /etc/motion/motion.conf /etc/motion/motion.conf.2
+   25  sudp cp motion.conf  /etc/motion/motion.conf
+   28  sudo cp mask_file.pgm  /etc/motion/
+
+   29  sudo blkid -o list -w /dev/null
+   32  sudo mkdir -p /media/usbstick
+   34  sudo mount -t ext4 -o defaults /dev/sda1 /media/usbstick
+   48  sudo vim /etc/fstab 
+   50  sudo apt-get install vim
+   51  sudo vim /etc/fstab 
+   55  reboot 
+  
+  162  sudo apt install git
+  163  git config  --global user.name "hrellup"
+  164  git config  --global user.name "hrein
+  165  git config  --global user.name "heinz.rellup@freenet.de"
+
+  171  git clone  https://github.com/hrellup/katzenreport2.git
+  
+  191  cd /usr/local/bin/
+  221  ln -s /home/pi/katzenreport2/baseline.py 
+  223  sudo ln -s /home/pi/katzenreport2/baseline.py 
+  225  sudo ln -s /home/pi/katzenreport2/classify.py 
+  226  sudo ln -s /home/pi/katzenreport2/emailconfig.py
+  227  sudo ln -s /home/pi/katzenreport2/katzenreport.py 
+  228  sudo ln -s /home/pi/katzenreport2/sendmail.py 
+  252  ln -s /home/pi/katzenreport2/baseline.txt 
+  
+  264  sudo apt-get  install dos2unix 
+  268  dos2unix katzenreport.py 
+  
+  292  sudo dphys-swapfile  swapoff
+  293  sudo systemctl  disable  dphys-swapfile
+  294  sudo systemctl  disable  dphys-swapfile2
+  295  sudo apt-get purge dphys-swapfile
