@@ -5,7 +5,6 @@ import sendmail
 
 
 
-
 def do(image):
 
   result = classify.classify(image)

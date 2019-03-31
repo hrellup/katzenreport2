@@ -10,7 +10,7 @@ import json
 PATH_ENTER = './IMG_ENTER/'
 PATH_EXIT = './IMG_EXIT/'
 
-FILENAME = 'baseline.txt'
+FILENAME = '/var/local/baseline.txt'
 
 def avg(path):
 	histo_list = []
