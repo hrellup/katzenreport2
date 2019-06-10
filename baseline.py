@@ -9,8 +9,9 @@ import json
 
 PATH_ENTER = './IMG_ENTER/'
 PATH_EXIT = './IMG_EXIT/'
+PATH_NONE = './IMG_NONE/'
 
-FILENAME = '/var/local/baseline.txt'
+FILENAME = 'baseline.txt'
 
 def avg(path):
 	histo_list = []
@@ -36,10 +37,13 @@ if __name__ == "__main__":
 
 	BASE_ENTER = avg(PATH_ENTER)
 	BASE_EXIT = avg(PATH_EXIT)
-	
+	BASE_NONE = avg(PATH_NONE)
+
 	data = {}
 	data['enter'] = BASE_ENTER
-	data['exit'] = BASE_ENTER
+	data['exit'] = BASE_EXIT
+
+	data['none'] = BASE_NONE
 	
 	write(data)
 	print read('enter')

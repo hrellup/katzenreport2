@@ -10,7 +10,7 @@ import emailconfig
 
 
 
-RECIPIENTS = ['fabian.puller@pfennigsberg.de', 'susi.puller@pfennigsberg.de', 'jens.puller@pfennigsberg.de']
+RECIPIENTS = ['fabian.puller@pfennigsberg.de', 'jens.puller@pfennigsberg.de']
 FROM = emailconfig.DATA['from']
 SUBJECT = 'Katzenreport'
 SERVER = emailconfig.DATA['server']
