@@ -10,6 +10,9 @@ def do(image):
   result = classify.classify(image)
   if result[0] in ('enter',):
     sendmail.go(image, result)
+
+  if result[0] in ('exit',):
+    sendmail.go(image, result)
 		
 
 if __name__ == "__main__":

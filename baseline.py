@@ -11,7 +11,7 @@ PATH_ENTER = './IMG_ENTER/'
 PATH_EXIT = './IMG_EXIT/'
 PATH_NONE = './IMG_NONE/'
 
-FILENAME = 'baseline.txt'
+FILENAME = '/var/local/baseline.txt'
 
 def avg(path):
 	histo_list = []

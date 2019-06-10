@@ -18,7 +18,7 @@ PORT = emailconfig.DATA['port']
 USER = emailconfig.DATA['user']
 PASSWORD = emailconfig.DATA['password']
 
-TEST = "TEST.JPG"
+TEST = "test.jpg"
 
 
 def go(image, result):
