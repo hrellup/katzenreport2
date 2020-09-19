@@ -34,26 +34,19 @@ def classify(img):
 	#str_none = str(val_none)
         erg = ("enter","exit","none")
         th = (TH_ENTER, TH_EXIT, TH_NONE)
-
+	
+	# den kleinsten wert gegen threshold ( max-fehler ) testen
         index = values.index(min(values))
         if values[index] <= th[index]:
-
           return erg[index], str(values)
-        #
-        # zweit kleinsen werte nochmal testen
-        values2 = ( 999, values[1], values[2])
 
+        # den zweit-kleinsten wert gegen threshold ( max-fehler ) testen
+        values2 = ( 999, values[1], values[2])
         index = values2.index(min(values2))
         if values2[index] <= th[index]:
-
           return erg[index],str(values), str(values2)
 
-	#if val_enter <= TH_ENTER:
-	#	return "enter", str_enter
-	#if val_exit <= TH_EXIT:
-	#	return "exit", str_exit
-	#return "none", str_enter, str_exit
-        #return erg[index], str(values)
+	# return exit
         return erg[2], str(values), str(values2)
 	
 
